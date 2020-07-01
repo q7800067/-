@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "面向对象", "面向对象\面向对象.vcxproj", "{1562482C-738C-44FF-ABF1-5CB3A7978EEC}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "通讯录管理系统", "..\通讯录管理系统\通讯录管理系统\通讯录管理系统.vcxproj", "{99680482-BC13-4E66-B79D-45EA73132496}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "基于多态的企业职工系统", "基于多态的企业职工系统\基于多态的企业职工系统.vcxproj", "{06A61679-8623-4030-BE54-2E18FED1FD1B}"
 EndProject
 Global
@@ -25,14 +23,6 @@ Global
 		{1562482C-738C-44FF-ABF1-5CB3A7978EEC}.Release|x64.Build.0 = Release|x64
 		{1562482C-738C-44FF-ABF1-5CB3A7978EEC}.Release|x86.ActiveCfg = Release|Win32
 		{1562482C-738C-44FF-ABF1-5CB3A7978EEC}.Release|x86.Build.0 = Release|Win32
-		{99680482-BC13-4E66-B79D-45EA73132496}.Debug|x64.ActiveCfg = Debug|x64
-		{99680482-BC13-4E66-B79D-45EA73132496}.Debug|x64.Build.0 = Debug|x64
-		{99680482-BC13-4E66-B79D-45EA73132496}.Debug|x86.ActiveCfg = Debug|Win32
-		{99680482-BC13-4E66-B79D-45EA73132496}.Debug|x86.Build.0 = Debug|Win32
-		{99680482-BC13-4E66-B79D-45EA73132496}.Release|x64.ActiveCfg = Release|x64
-		{99680482-BC13-4E66-B79D-45EA73132496}.Release|x64.Build.0 = Release|x64
-		{99680482-BC13-4E66-B79D-45EA73132496}.Release|x86.ActiveCfg = Release|Win32
-		{99680482-BC13-4E66-B79D-45EA73132496}.Release|x86.Build.0 = Release|Win32
 		{06A61679-8623-4030-BE54-2E18FED1FD1B}.Debug|x64.ActiveCfg = Debug|x64
 		{06A61679-8623-4030-BE54-2E18FED1FD1B}.Debug|x64.Build.0 = Debug|x64
 		{06A61679-8623-4030-BE54-2E18FED1FD1B}.Debug|x86.ActiveCfg = Debug|Win32

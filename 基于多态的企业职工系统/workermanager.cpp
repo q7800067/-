@@ -28,14 +28,18 @@ void workermanager::addemp() {
 	cout << "请输入添加职工数量" << endl;
 	int addnum = 0;
 	cin >> addnum;
-	if (addnum > 0) {
-		int newsize = this->m_empnum + addnum;
-		worker **newspace=new worker* [newsize];
-		if (this->m_emparray != NULL) {
-			for (int i = 0; i < this->m_empnum; i++) {
+	if (addnum > 0) 
+	{
+		int newsize = this->m_empnum + addnum;//计算新空间大小
+		worker** newspace = new worker * [newsize];//开辟新空间
+		if (this->m_emparray != NULL)
+		{ //将原空间下内容放到新空间下
+			for (int i = 0; i < this->m_empnum; i++)
+			{
 				newspace[i] = this->m_emparray[i];
 			}
-			for (int i = 0; i < addnum; i++) {
+		}
+			for (int i = 0; i < addnum; i++) { //输入新数据
 				int id;
 				string name;
 				int dselect;
@@ -50,29 +54,42 @@ void workermanager::addemp() {
 				cin >> dselect;
 				worker* a = NULL;
 				switch (dselect) {
-					case 1:
-						a = new employee(id, name, 1);
-						break;
-					case 2:
-						a = new manager(id, name, 2);
-						break;
-					case 3:
-						a = new boss(id, name, 3);
-						break;
-					default:
-						break;
+				case 1:
+					a = new employee(id, name, 1);
+					break;
+				case 2:
+					a = new manager(id, name, 2);
+					break;
+				case 3:
+					a = new boss(id, name, 3);
+					break;
+				default:
+					break;
 				}
 				newspace[this->m_empnum + i] = a;
 			}
-			delete[]this->m_emparray;
-			this->m_emparray = newspace;
-			this->m_empnum = newsize;
+			delete[] this->m_emparray;  //释放原有空间
+			this->m_emparray = newspace;//更改新空间的指向
+			this->m_empnum = newsize;//更新新的个数
 			cout << "成功添加了" << addnum << "名新员工" << endl;
-		}
+	
 	}
-	else {
-		cout << "输入有误，请重新输入" << endl;
+	else
+	{
+			cout << "输入有误，请重新输入" << endl;
 	}
-	system("pause");
-	system("cls");
+		system("pause");
+		system("cls");
+	}
+
+
+
+
+
+workermanager::~workermanager()  //不添加这段代码就会出错
+{
+	if (this->m_emparray!=NULL)
+	{
+		delete[] this->m_emparray;
+	}
 }

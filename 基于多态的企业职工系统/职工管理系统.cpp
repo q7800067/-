@@ -14,19 +14,6 @@ int main() {
 	int choice = 0;
 	while (true)
 	{
-		worker* worker = NULL;
-		worker = new employee(1, "张三", 1);
-		worker->showinfo();
-		delete worker;
-
-		worker = new manager(2, "李四", 2);
-		worker->showinfo();
-		delete worker;
-
-		worker = new boss(3, "王五", 3);
-		worker->showinfo();
-		delete worker;
-
 
 
 		//展示菜单
@@ -40,6 +27,7 @@ int main() {
 			wm.exitsystem();
 			break;
 		case 1: //添加职工
+			wm.addemp();
 			break;
 		case 2: //显示职工
 			break;

@@ -9,8 +9,8 @@ class workermanager {
 public:
 	void exitsystem();
 	void showmenu();
-	int m_empnum;
-	worker** m_emparray;
+	int m_empnum;//记录文件汇总的人数个数
+	worker** m_emparray; //员工数组指针
 	void addemp();
 
 

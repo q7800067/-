@@ -41,10 +41,10 @@
     <ClInclude Include="employee.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="manager.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
     <ClInclude Include="boss.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="manager.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

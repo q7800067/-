@@ -19,3 +19,60 @@ void workermanager::showmenu() {
 	cout << "********************************************" << endl;
 	cout << endl;
 }
+workermanager::workermanager() {
+	this->m_empnum = 0;
+	this->m_emparray = NULL;
+}
+
+void workermanager::addemp() {
+	cout << "请输入添加职工数量" << endl;
+	int addnum = 0;
+	cin >> addnum;
+	if (addnum > 0) {
+		int newsize = this->m_empnum + addnum;
+		worker **newspace=new worker* [newsize];
+		if (this->m_emparray != NULL) {
+			for (int i = 0; i < this->m_empnum; i++) {
+				newspace[i] = this->m_emparray[i];
+			}
+			for (int i = 0; i < addnum; i++) {
+				int id;
+				string name;
+				int dselect;
+				cout << "请输入第" << i + 1 << "个新职工编号：" << endl;
+				cin >> id;
+				cout << "请输入第" << i + 1 << "个新职工姓名" << endl;
+				cin >> name;
+				cout << "请选择该职工岗位：" << endl;
+				cout << "1普通职工" << endl;
+				cout << "2经理" << endl;
+				cout << "3老板" << endl;
+				cin >> dselect;
+				worker* a = NULL;
+				switch (dselect) {
+					case 1:
+						a = new employee(id, name, 1);
+						break;
+					case 2:
+						a = new manager(id, name, 2);
+						break;
+					case 3:
+						a = new boss(id, name, 3);
+						break;
+					default:
+						break;
+				}
+				newspace[this->m_empnum + i] = a;
+			}
+			delete[]this->m_emparray;
+			this->m_emparray = newspace;
+			this->m_empnum = newsize;
+			cout << "成功添加了" << addnum << "名新员工" << endl;
+		}
+	}
+	else {
+		cout << "输入有误，请重新输入" << endl;
+	}
+	system("pause");
+	system("cls");
+}

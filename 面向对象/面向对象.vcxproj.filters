@@ -15,25 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="源.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="++重载.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="01继承.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="常对象与常函数.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="成员函数友元.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="仿函数.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="赋值运算符.cpp">
+    <ClCompile Include="读写文件.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

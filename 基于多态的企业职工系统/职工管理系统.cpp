@@ -28,9 +28,17 @@ int main() {
 			wm.addemp();
 			break;
 		case 2: //显示职工
+			wm.showemp();
 			break;
 		case 3: //删除职工
-			break;
+		{int ret = wm.isexist(1);
+		if (ret != -1) {
+			cout << "职工存在" << endl;
+		}
+		else {
+			cout << "职工不存在" << endl;
+		}
+		break; }
 		case 4: //修改职工
 			break;
 		case 5: //查找职工

@@ -174,3 +174,30 @@ void workermanager::save() {
 	}
 	ofs.close();
 }
+//显示员工
+void workermanager::showemp() {
+	if (this->m_fileisempty) {
+		cout << "文件不存在" << endl;
+	}
+	else {
+		for (int i = 0; i < m_empnum; i++) {
+			this->m_emparray[i]->showinfo();
+		}
+	}
+	system("pause");
+	system("cls");
+}
+int workermanager::isexist(int id) {
+	int index = -1;
+	for (int i = 0; i < this->m_empnum; i++) {
+		if (this->m_emparray[i]->m_id == id) {
+			index = i;
+			break;
+		}
+	}
+	return index;
+}
+//删除职工
+void  workermanager::del_emp() {
+
+}

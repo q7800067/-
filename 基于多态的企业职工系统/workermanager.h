@@ -20,6 +20,9 @@ public:
 	bool m_fileisempty;
 	int get_empnum(); //统计文件中的人数
 	void init_emp();
+	void showemp(); //显示员工
+	void  del_emp();  //删除员工
+	int isexist(int id);
 	//构造函数
 	workermanager();
 	//析构函数

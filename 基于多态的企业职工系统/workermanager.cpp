@@ -20,10 +20,46 @@ void workermanager::showmenu() {
 	cout << endl;
 }
 workermanager::workermanager() {
+	//1、文件不存在
+	ifstream ifs;
+	ifs.open(FILENAME, ios::in);
+	if (!ifs.is_open()) {
+		cout << "文件不存在" << endl;
+		this->m_empnum = 0;
+		this->m_emparray = NULL;
+		this->m_fileisempty = true;
+		ifs.close();
+		return;
+	}
+	//2文件存在，数据为空
+	char ch;
+	ifs >> ch;
+	if (ifs.eof()) {
+		cout << "文件为空" << endl;
+		this->m_empnum = 0;
+		this->m_emparray = NULL;
+		this->m_fileisempty = true;
+		ifs.close();
+		return;
+	}
+	//文件存在，并且记录数据
+	int num = this->get_empnum();
+	/*cout << "职工人数为" << num << endl;*/
+	this->m_empnum = num;
+
+	this->m_emparray = new worker * [this->m_empnum];//开辟空间
+	this->init_emp(); //将文件中的数据，存到数组中
+	////测试代码
+	//for (int i = 0; i < this->m_empnum; i++) {
+	//	cout << "职工编号" << this->m_emparray[i]->m_id
+	//		<< "姓名" << this->m_emparray[i]->m_name
+	//		<< "部门编号" << this->m_emparray[i]->m_deptid << endl;
+	//}
+
 	this->m_empnum = 0;
 	this->m_emparray = NULL;
 }
-
+//第154集
 void workermanager::addemp() {
 	cout << "请输入添加职工数量" << endl;
 	int addnum = 0;
@@ -71,8 +107,9 @@ void workermanager::addemp() {
 			delete[] this->m_emparray;  //释放原有空间
 			this->m_emparray = newspace;//更改新空间的指向
 			this->m_empnum = newsize;//更新新的个数
+			this->m_fileisempty = false;  //更新员工不为空标志
 			cout << "成功添加了" << addnum << "名新员工" << endl;
-	
+			this->save();
 	}
 	else
 	{
@@ -82,9 +119,42 @@ void workermanager::addemp() {
 		system("cls");
 	}
 
+int workermanager::get_empnum() {
+	ifstream ifs;
+	ifs.open(FILENAME, ios::in);
+	int id;
+	string name;
+	int did;
+	int num = 0;
+	while (ifs >> id&& ifs >> name && ifs >> did) {
+		num++;
+	}
+	return num;
+}
 
-
-
+void workermanager::init_emp() {
+	ifstream ifs;
+	ifs.open(FILENAME, ios::in);
+	int id;
+	string name;
+	int did;
+	int index = 0;
+	while (ifs >> id && ifs >> name && ifs >> did) {
+		worker* worker = NULL;
+		if (did == 1) {
+			worker = new employee(id, name, did);
+		}
+		else if (did == 2) {
+			worker = new manager(id, name, did);
+		}
+		else {
+			worker = new boss(id, name, did);
+		}
+		this->m_emparray[index] = worker;
+		index++;
+	}
+	ifs.close();
+}
 
 workermanager::~workermanager()  //不添加这段代码就会出错
 {
@@ -92,4 +162,15 @@ workermanager::~workermanager()  //不添加这段代码就会出错
 	{
 		delete[] this->m_emparray;
 	}
+}
+
+void workermanager::save() {
+	ofstream ofs;
+	ofs.open(FILENAME, ios::out);
+	for (int i = 0; i < this->m_empnum; i++) {
+		ofs << this->m_emparray[i]->m_id << "  "
+			<< this->m_emparray[i]->m_name << "  "
+			<< this->m_emparray[i]->m_deptid << endl;
+	}
+	ofs.close();
 }

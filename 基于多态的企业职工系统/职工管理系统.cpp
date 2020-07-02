@@ -14,8 +14,6 @@ int main() {
 	int choice = 0;
 	while (true)
 	{
-
-
 		//展示菜单
 		wm.showmenu();
 		cout << "请输入您的选择:" << endl;

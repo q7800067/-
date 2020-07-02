@@ -1,12 +1,20 @@
-#include <iostream>
+#include<iostream>
+#include<string>
 using namespace std;
 
-template<class T>
-bool mycompare(T& a, T& b) {
-	if (a == b) {
-		return true;
-	}
-	else {
-		return false;
-	}
+
+
+
+
+
+int main() {
+
+
+
+
+
+
+	system("pause");
+	system("cls");
 }
+

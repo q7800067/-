@@ -17,13 +17,13 @@ public:
 	myarray(const myarray& arr) {
 		this->m_capacity = arr.m_capacity;
 		this->m_size = arr.m_size;
-		this->paddress=new T[arr.m_capacity]
+		this->paddress = new T[arr.m_capacity];
 			for (int i = 0; i < this->m_size; i++) {
 				this->paddress[i] = arr.paddress[i];
 			}
 	}
 	//---------------
-	myarray& operator=(const myarray& arr) {
+	myarray& operator=(const myarray& myarray) {
 		if (this->paddress != NULL) {
 			delete[] this->paddress;
 			this->m_capacity = 0;
@@ -37,7 +37,7 @@ public:
 		}
 		return *this;
 	}
-	T& oprtator[](int index) {
+	T& operator[](int index) {
 		return this->paddress[index];
 	}
 	//尾插法
@@ -49,27 +49,25 @@ public:
 		this->m_size++;
 	}
 	//尾删法
-	void Pop_back()
+	void pop_back()
 	{
-		if (this->m_Size == 0)
-		{
-			return;
-		}
-		this->m_Size--;
+		if (this->m_size == 0)
+		{return;}
+		this->m_size--;
 	}
 	//获取数组容量
-	int getCapacity()
+	int getcapacity()
 	{
-		return this->m_Capacity;
+		return this->m_capacity;
 	}
 
 	//获取数组大小
-	int	getSize()
+	int	getsize()
 	{
-		return this->m_Size;
+		return this->m_size;
 	}
 	~myarray() {
-		if (this->pAddress != NULL)
+		if (this->paddress != NULL)
 		{
 			delete[] this->paddress;
 			this->paddress = NULL;
@@ -80,5 +78,6 @@ public:
 private:
 	T* paddress;
 	int m_capacity;
+	int m_size;
 };
 

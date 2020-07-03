@@ -20,7 +20,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="数组类封装案例.cpp">
+    <ClCompile Include="通用的模板.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

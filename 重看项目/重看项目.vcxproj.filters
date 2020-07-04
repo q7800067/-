@@ -15,15 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="myarray.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="通用的模板.cpp">
+    <ClCompile Include="..\模板\基于vector和map的案例.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="源.cpp">
+    <ClCompile Include="..\模板\一元二元谓词.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

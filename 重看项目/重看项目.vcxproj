@@ -18,18 +18,11 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="myarray.hpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="源.cpp" />
-    <ClCompile Include="通用的模板.cpp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{1910c309-1e01-4268-8c0c-6a2bf18b1bd1}</ProjectGuid>
-    <RootNamespace>模板</RootNamespace>
+    <ProjectGuid>{7c13ba0c-f472-4cf5-8985-72b38afe829e}</ProjectGuid>
+    <RootNamespace>重看项目</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -145,6 +138,10 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\模板\一元二元谓词.cpp" />
+    <ClCompile Include="..\模板\基于vector和map的案例.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

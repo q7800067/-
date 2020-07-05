@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{7c13ba0c-f472-4cf5-8985-72b38afe829e}</ProjectGuid>
-    <RootNamespace>重看项目</RootNamespace>
+    <ProjectGuid>{2403b39f-1cf9-45b6-8760-9eaba2fb0ddd}</ProjectGuid>
+    <RootNamespace>演讲比赛流程管理系统</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,12 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\模板\accumulate.cpp" />
-    <ClCompile Include="..\模板\find_if.cpp" />
-    <ClCompile Include="..\模板\一元二元谓词.cpp" />
-    <ClCompile Include="..\模板\两个容器合并.cpp" />
-    <ClCompile Include="..\模板\基于vector和map的案例.cpp" />
-    <ClCompile Include="..\模板\查找算法.cpp" />
+    <ClInclude Include="speechmanager.h" />
+    <ClInclude Include="speaker.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="speaker.cpp" />
+    <ClCompile Include="speechmanager.cpp" />
+    <ClCompile Include="主函数.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

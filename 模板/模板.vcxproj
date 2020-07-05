@@ -22,7 +22,6 @@
     <ClInclude Include="myarray.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="源.cpp" />
     <ClCompile Include="通用的模板.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

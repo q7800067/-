@@ -15,13 +15,22 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="myarray.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="通用的模板.cpp">
+    <ClCompile Include="speechmanager.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="主函数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="speaker.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="speechmanager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="speaker.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

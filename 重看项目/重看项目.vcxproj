@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="..\模板\一元二元谓词.cpp" />
     <ClCompile Include="..\模板\基于vector和map的案例.cpp" />
+    <ClCompile Include="..\模板\查找算法.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

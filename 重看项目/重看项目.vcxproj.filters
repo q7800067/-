@@ -24,5 +24,11 @@
     <ClCompile Include="..\模板\查找算法.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\模板\两个容器合并.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\模板\find_if.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

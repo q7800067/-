@@ -139,7 +139,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\模板\find_if.cpp" />
     <ClCompile Include="..\模板\一元二元谓词.cpp" />
+    <ClCompile Include="..\模板\两个容器合并.cpp" />
     <ClCompile Include="..\模板\基于vector和map的案例.cpp" />
     <ClCompile Include="..\模板\查找算法.cpp" />
   </ItemGroup>

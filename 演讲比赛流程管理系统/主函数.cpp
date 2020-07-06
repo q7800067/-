@@ -19,8 +19,11 @@ int main() {
 		case 1:sm.startspeech();
 			break;
 		case 2:
+			sm.loadrecord();
+			sm.showrecord();
 			break;
 		case 3:
+			sm.clearrecord();
 			break;
 		case 0:
 			sm.exitsystem();

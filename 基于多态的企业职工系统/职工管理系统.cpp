@@ -31,21 +31,26 @@ int main() {
 			wm.showemp();
 			break;
 		case 3: //删除职工
-		{int ret = wm.isexist(1);
+		/*{int ret = wm.isexist(1);
 		if (ret != -1) {
 			cout << "职工存在" << endl;
 		}
 		else {
 			cout << "职工不存在" << endl;
-		}
-		break; }
+		}*/
+			wm.del_emp();
+		break; 
 		case 4: //修改职工
+			wm.mod_emp();
 			break;
 		case 5: //查找职工
+			wm.find_emp();
 			break;
 		case 6: //排序职工
+			wm.sort_emp();
 			break;
 		case 7: //清空文件
+			wm.clean_file();
 			break;
 		default:
 			system("cls");

@@ -23,6 +23,12 @@ public:
 	void showemp(); //显示员工
 	void  del_emp();  //删除员工
 	int isexist(int id);
+	void mod_emp();//修改员工
+	void find_emp(); //查找员工
+	void sort_emp(); //排序
+	void clean_file();
+
+
 	//构造函数
 	workermanager();
 	//析构函数

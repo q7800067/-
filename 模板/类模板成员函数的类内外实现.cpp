@@ -8,8 +8,8 @@ template<class T1,class T2>
 void printperson2(person<T1, T2>& p) {
 	cout << "类外实现" << p.m_name << "年龄" << p.m_age << endl;
 }
-template <class T1,class T2>
 // -------------------------------------------------------
+template <class T1,class T2>
 class person {
 public:
 		person(T1 name, T2 age) {
@@ -22,8 +22,7 @@ public:
 	{
 		cout << "姓名" << p.m_name << "年龄" << p.m_age << endl;
 	}
-	//全局函数 类外实现
-	//加空模板的参数列表
+	//全局函数的类外实现加空模板的参数列表
 	 friend void printperson2<>(person<T1, T2>&p);
 private:
 	T1 m_name;
